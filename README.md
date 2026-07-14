@@ -2,7 +2,7 @@
 
 A full-stack Student Management System built using Node.js, Express.js, MySQL, HTML, CSS, Bootstrap, and JavaScript.
 
-This project is being developed as a learning project to understand full-stack web development concepts and CRUD operations.
+This project is currently under development as I learn full-stack web development using Node.js, Express.js, and MySQL. New features will be added as the project progresses.
 
 ## Features
 
@@ -25,7 +25,8 @@ This project is being developed as a learning project to understand full-stack w
 
 ## Current Status
 
-✔ Student Registration completed
+ Student Registration feature completed
+ View Students feature in progress
 
 ## Upcoming Features
 
