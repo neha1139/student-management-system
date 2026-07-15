@@ -7,6 +7,7 @@ This project is currently under development as I learn full-stack web developmen
 ## Features
 
 - Add a new student
+-  View all students
 - Store student details in MySQL database
 - Express.js backend
 - HTML, CSS, and Bootstrap frontend
@@ -26,15 +27,16 @@ This project is currently under development as I learn full-stack web developmen
 ## Current Status
 
  Student Registration feature completed
- View Students feature in progress
+ View Students feature completed
 
 ## Upcoming Features
 
-- View Students
+
 - Update Student
 - Delete Student
 - Search Students
-- Input Validation
+- Form Validation
+- Better UI Improvements
 
 ## Learning Goals
 
