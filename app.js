@@ -8,11 +8,12 @@ app.use(express.static("public"));
 //express.json() is middleware that parses incoming JSON data from the request body and converts it into a JavaScript object. This allows us to access the data using req.body. Without it, req.body will be undefined for JSON requests.
 app.use(express.json());
 
-
+//display login page 
 app.get("/",(req,res)=>{
   res.sendFile(path.join(__dirname,"public","add-student.html"));
 });
 
+//add student
 app.post("/students",(req,res)=>{
 console.log(req.body);
    const sql = `
@@ -47,6 +48,23 @@ console.log(req.body);
         });
     });
 });
+
+
+//read students
+app.get("/students",(req,res)=>{
+   const sql="SELECT * FROM students";
+   db.query(sql,(err,result)=>{
+    if(err){
+        console.log(err);
+        return res.status(500).json({
+            success:"false",
+            message:"failed to fetch students"
+        });
+    }
+    res.json(result);
+   });
+});
+
 
 app.listen(3000,()=>{
     console.log("Server is running on port 3000")
