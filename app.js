@@ -66,6 +66,23 @@ app.get("/students",(req,res)=>{
 });
 
 
+
+app.get("/students/:id",(req,res)=>{
+const id = req.params.id;
+const sql="SELECT * FROM students WHERE id = ?";
+db.query(sql,[id],(err,result)=>{
+if(err){
+    console.log(err);
+    return res.status(500).json({
+        success:"false",
+        message:"failed to fetch student"
+    });
+}
+res.json(result[0]);
+});
+});
+
+
 app.listen(3000,()=>{
     console.log("Server is running on port 3000")
 });

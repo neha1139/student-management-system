@@ -1,3 +1,15 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+if(id){
+    fetch(`/students/${id}`)
+    .then(response=>response.json())
+    .then(data=>{
+
+    })
+    .catch(error=>{
+        console.log(error);
+    });
+}
 
 const form=document.getElementById("studentForm");
 

@@ -17,6 +17,10 @@ fetch("/students")
             <td>${student.gender}</td>
             <td>${student.dob}</td>
             <td>${student.address}</td>
+             <td> <button onclick="editStudent(${student.id})">
+                Edit
+                </button>
+                </td>
         </tr>
     `;
         tableBody.innerHTML += row;
@@ -27,3 +31,7 @@ fetch("/students")
     });
 
 
+function editStudent(id){
+    window.location.href=`add-student.html?id=${id}`;
+
+}
