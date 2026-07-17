@@ -82,6 +82,40 @@ res.json(result[0]);
 });
 });
 
+//update students 
+app.put("/students/:id",(req,res)=>{
+const id=req.params.id;
+const data=req.body;
+
+const sql=`UPDATE students 
+SET 
+name=?,email=?,phone=?,course=?,semester=?,gender=?,dob=?,address=? WHERE id=?`;
+
+const values=[
+    data.name,
+    data.email,
+    data.phone,
+    data.course,
+    data.semester,
+    data.gender,
+    data.dob,
+    data.address,
+    id
+];
+
+db.query(sql,values,(err,result)=>{
+    if(err){
+        return res.status(500).json({
+            success:"false",
+            message:"Failed to update student"
+        });
+    }
+    res.json({
+        success:"true",
+        message:"Student updated successsfully"
+    });
+});
+});
 
 app.listen(3000,()=>{
     console.log("Server is running on port 3000")

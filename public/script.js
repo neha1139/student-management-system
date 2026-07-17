@@ -4,7 +4,14 @@ if(id){
     fetch(`/students/${id}`)
     .then(response=>response.json())
     .then(data=>{
-
+        document.getElementById("name").value = data.name;
+        document.getElementById("email").value=data.email;
+        document.getElementById("phone").value = data.phone;
+        document.getElementById("course").value = data.course;
+        document.getElementById("semester").value = data.semester;
+        document.getElementById("gender").value = data.gender;
+        document.getElementById("dob").value = data.dob;
+        document.getElementById("address").value = data.address;
     })
     .catch(error=>{
         console.log(error);
@@ -41,6 +48,26 @@ const address = document.getElementById("address").value;
 };
 
 console.log(student);
+if(id){
+    fetch(`/students/${id}`,{
+        method:"PUT",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(student)
+    })
+    .then(response=>response.json())
+    .then(data=>{
+        alert(data.message);
+        window.location.href="view-students.html"
+    })
+    .catch(error=>{
+        console.log(error);
+    });
+}
+else{
+
+
 //fetch() is a built-in JavaScript function used to send requests from the browser to the server.
 fetch("/students",{
     // "/students"--->This is called the API endpoint or route.
@@ -55,8 +82,10 @@ fetch("/students",{
         .then(response=>response.json())
         .then(data=>{
             alert(data.message);
+            window.location.href = "view-students.html";
         })
         .catch(error=>{
             console.log(error);
-        })
         });
+    }
+});

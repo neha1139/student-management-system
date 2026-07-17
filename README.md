@@ -4,17 +4,19 @@ A full-stack Student Management System built using Node.js, Express.js, MySQL, H
 
 This project is currently under development as I learn full-stack web development using Node.js, Express.js, and MySQL. New features will be added as the project progresses.
 
-## Features
 
+
+## Features
 - Add a new student
 -  View all students
+-  Edit student
 - Store student details in MySQL database
 - Express.js backend
 - HTML, CSS, and Bootstrap frontend
 - Fetch API for client-server communication
 
-## Tech Stack
 
+## Tech Stack
 - HTML5
 - Bootstrap 5
 - JavaScript
@@ -24,22 +26,34 @@ This project is currently under development as I learn full-stack web developmen
 - mysql2
 
 
-## Current Status
 
+## API Endpoints
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /students | Add a new student |
+| GET | /students | Get all students |
+| GET | /students/:id | Get a student by ID |
+| PUT | /students/:id | Update a student |
+
+
+
+## Current Status
  Student Registration feature completed
  View Students feature completed
+ Edit student completed 
 
-## Upcoming Features
 
 
-- Update Student
+
+## Upcoming Feature
 - Delete Student
 - Search Students
 - Form Validation
 - Better UI Improvements
 
-## Learning Goals
 
+
+## Learning Goals
 This project is being built to learn:
 
 - Express.js
@@ -47,4 +61,6 @@ This project is being built to learn:
 - MySQL Integration
 - CRUD Operations
 - Git & GitHub
+
+
 
