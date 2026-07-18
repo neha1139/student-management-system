@@ -34,20 +34,21 @@ This project is currently under development as I learn full-stack web developmen
 | GET | /students | Get all students |
 | GET | /students/:id | Get a student by ID |
 | PUT | /students/:id | Update a student |
-
+|DELETE| /students/:id|delete a student|
 
 
 ## Current Status
  Student Registration feature completed
  View Students feature completed
  Edit student completed 
+ delete student completed 
+ search student by name completed 
 
 
 
 
 ## Upcoming Feature
-- Delete Student
-- Search Students
+
 - Form Validation
 - Better UI Improvements
 
