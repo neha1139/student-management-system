@@ -1,10 +1,19 @@
-
+ let students = [];
  const tableBody = document.getElementById("studentTableBody");
-
+ const search = document.getElementById("search");
 fetch("/students")
     .then(response => response.json())
     .then(data => {
-        data.forEach(student => {
+        students=data;
+        displayStudents(students);
+    })
+     .catch(error => {
+        console.log(error);
+    });
+    
+        function displayStudents(data){
+            tableBody.innerHTML="";
+             data.forEach(student => {
 
     const row = `
         <tr>
@@ -31,10 +40,19 @@ fetch("/students")
     `;
         tableBody.innerHTML += row;
 });
-    })
-    .catch(error => {
-        console.log(error);
+        }
+       
+   //search a student logic
+   search.addEventListener("input",function(){
+   const filteredStudents=students.filter(student=>{
+        return student.name
+        .toLowerCase()
+        .includes(search.value.toLowerCase())
     });
+    displayStudents(filteredStudents);
+   });
+   
+   
 
 
 function editStudent(id){
