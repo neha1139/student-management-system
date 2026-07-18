@@ -17,10 +17,16 @@ fetch("/students")
             <td>${student.gender}</td>
             <td>${student.dob}</td>
             <td>${student.address}</td>
-             <td> <button onclick="editStudent(${student.id})">
+             <td> 
+             <button onclick="editStudent(${student.id})">
                 Edit
                 </button>
-                </td>
+             </td>
+             <td>
+               <button onclick="deleteStudent(${student.id})">
+                Delete
+               </button>
+             </td>
         </tr>
     `;
         tableBody.innerHTML += row;
@@ -33,5 +39,22 @@ fetch("/students")
 
 function editStudent(id){
     window.location.href=`add-student.html?id=${id}`;
+}
 
+function deleteStudent(id){
+    const result=confirm("Are you sure you want to delete this student?");
+    if(!result){
+        return;
+    }
+    fetch(`/students/${id}`,{
+        method:"DELETE"
+    })
+    .then(response=>response.json())
+    .then(data=>{
+        alert(data.message);
+        location.reload();
+    })
+    .catch(error=>{
+        console.log(error);
+    });
 }

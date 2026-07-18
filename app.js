@@ -117,6 +117,25 @@ db.query(sql,values,(err,result)=>{
 });
 });
 
+//delete a student
+app.delete("/students/:id",(req,res)=>{
+    const id=req.params.id;
+   const sql=" DELETE FROM students WHERE id=?";
+   db.query(sql,[id],(err,result)=>{
+    if(err){
+        return res.status(500).json({
+            success:"false",
+            message:"Failed to delete student"
+        });
+    }
+    res.json({
+        success:"true",
+        message:"Student deleted successfully"
+    });
+   });
+
+});
+
 app.listen(3000,()=>{
     console.log("Server is running on port 3000")
 });
