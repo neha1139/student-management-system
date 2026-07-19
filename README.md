@@ -75,26 +75,30 @@ This project is built to learn full-stack web development using Node.js, Express
 
 ## Installation
 1. Clone the repository  
-2. ```bash
-3.  git clone <[repository-url](https://github.com/neha1139/student-management-system.git)> 
-4.  ```
-5. Navigate to the project folder
-6. ```bash 
-7. cd Student-Management-System
-8. ```
-9. Install dependencies  
-10. ```bash
+ ```bash
+  git clone https://github.com/neha1139/student-management-system.git
+  ```
+2. Navigate to the project folder
+ ```bash 
+ cd Student-Management-System
+ ```
+3. Install dependencies  
+ ```bash
   npm install 
   ```
-11. Start the server
+4. Start the server
 ```bash 
  node app.js
  ```
-12. Open your browser 
-13. ```text 
+5. Open your browser 
+ ```text 
 //http://localhost:3000
 ```
+6.Configure MySQL Database
 
+- Create a database named `student_management`
+- Import the required tables
+- Update MySQL credentials in `db.js`
 
 
 ## Project Structure
