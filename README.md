@@ -74,13 +74,32 @@ This project is built to learn full-stack web development using Node.js, Express
 
 
 ## Installation
-1. Clone the repository  //git clone <repository-url>
-2. Navigate to the project folder //cd Student-Management-System
-3. Install dependencies //npm install
-4. Start the server //node app.js
-5. Open your browser //http://localhost:3000
+1. Clone the repository  
+2. ```bash
+3.  git clone <[repository-url](https://github.com/neha1139/student-management-system.git)> 
+4.  ```
+5. Navigate to the project folder
+6. ```bash 
+7. cd Student-Management-System
+8. ```
+9. Install dependencies  
+10. ```bash
+  npm install 
+  ```
+11. Start the server
+```bash 
+ node app.js
+ ```
+12. Open your browser 
+13. ```text 
+//http://localhost:3000
+```
 
 
+
+## Project Structure
+
+```text
 Student-Management-System
 │
 ├── database
@@ -95,5 +114,6 @@ Student-Management-System
 ├── app.js
 ├── package.json
 └── README.md
+```
 
 
