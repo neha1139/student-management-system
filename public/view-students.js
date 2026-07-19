@@ -44,7 +44,6 @@ fetch("/students")
        
    //search a student logic
    search.addEventListener("input",function(){
-    console.log(search.value);
    const filteredStudents=students.filter(student=>{
         return  (
              student.name.toLowerCase().includes(search.value.toLowerCase())
