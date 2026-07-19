@@ -47,12 +47,14 @@ This project is built to learn full-stack web development using Node.js, Express
 
 
 ## Current Status
- Student Registration feature completed
- View Students feature completed
- Edit student completed 
- Delete student completed 
- Search student by name,email and course completed 
- Form validation completed 
+| Feature | Status |
+|---------|--------|
+| Student Registration | ✅ Completed |
+| View Students | ✅ Completed |
+| Edit Student | ✅ Completed |
+| Delete Student | ✅ Completed |
+| Search Students (Name, Email, Course) | ✅ Completed |
+| Form Validation | ✅ Completed |
 
 
 
