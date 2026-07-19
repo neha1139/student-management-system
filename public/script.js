@@ -1,5 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
+const emailPattern=/^[^\s@]+@+[^\s@]+\.[^\s@]+$/;
+const phonePattern=/^\d{10}$/;
 if(id){
     fetch(`/students/${id}`)
     .then(response=>response.json())
@@ -48,6 +50,53 @@ const address = document.getElementById("address").value;
 };
 
 console.log(student);
+
+console.log("Name =", name);
+console.log("Name.trim() =", name.trim());
+
+//validation of form
+if(name.trim()==""){
+    alert("Name is required");
+    return;
+}
+if(email.trim()==""){
+    alert("Email is required");
+    return;
+}
+ if(!emailPattern.test(email)){
+    alert("Enter valid email address");
+    return;
+ }
+ if (phone.trim() === "") {
+    alert("Phone number is required");
+    return;
+}
+if(!phonePattern.test(phone)){
+     alert("Phone number must be exactly 10 digits");
+    return;
+}
+if(course==""){
+      alert("Course is required");
+    return;
+}
+if (semester === "") {
+    alert("Please select a semester");
+    return;
+}
+if (gender === "") {
+    alert("Please select a gender");
+    return;
+}
+if (dob === "") {
+    alert("Please select Date of Birth");
+    return;
+}
+if (address.trim() === "") {
+    alert("Address is required");
+    return;
+}
+
+
 if(id){
     fetch(`/students/${id}`,{
         method:"PUT",
