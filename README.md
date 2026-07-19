@@ -10,6 +10,8 @@ This project is currently under development as I learn full-stack web developmen
 - Add a new student
 -  View all students
 -  Edit student
+-  Delete a student
+-  Serach student by name,course,email
 - Store student details in MySQL database
 - Express.js backend
 - HTML, CSS, and Bootstrap frontend
@@ -42,7 +44,8 @@ This project is currently under development as I learn full-stack web developmen
  View Students feature completed
  Edit student completed 
  delete student completed 
- search student by name completed 
+ search student by name,email and course completed 
+ 
 
 
 
